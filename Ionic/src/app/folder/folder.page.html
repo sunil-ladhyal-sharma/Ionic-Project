@@ -8,14 +8,92 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <div class="row">
+  <div class="col-6 primary">Bootstrap</div>
+  <div class="col-6 primary">Test</div>
+ </div>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+ <div class="container">
+ <div class="row">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+ </div>
+
+</div>
+
+
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" (click)="showModal()">
+  Launch demo modal
+</button>
+
+<div class="container">
+<!-- Modal -->
+<div class="modal"  [ngClass]="step === true ? 'show' : 'hide'">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- <div class="container" *ngFor="let p of productList">
+  <div class="row">
+    <div class="col-md-3"> -->
+
+      <ion-grid   [fixed]="true">
+        <ion-row>
+          <ion-col size-md="4"  *ngFor="let p of productList">
+      <ion-card >
+       
+        <ion-card-header>
+          <ion-card-title> 
+            <img alt="Silhouette of mountains" [src]="p.image" style="
+              object-fit: scale-down;
+              float:center" /></ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+
+      </ion-col>
+  
+    </ion-row>
+  </ion-grid>
+    <!-- </div>
+  </div>
+  
+</div> -->
 </ion-content>

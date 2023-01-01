@@ -26,3 +26,16 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display:   none;
+}
+
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+}
